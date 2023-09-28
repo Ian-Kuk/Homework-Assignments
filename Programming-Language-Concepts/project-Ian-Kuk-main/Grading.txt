@@ -1,0 +1,15 @@
+Code Quality Points:
+
+1. Reading: 9/10 points
+2. Running: 10/10 points
+3. Parallel: 10/15 points
+4. Sorting: 10/10 points
+
+Autotest Score: 65/85 points
+
+Total Score: 104/130 points
+
+Notes:
+- Introduced a type Network but did not consistently use it in declaration of function types
+- Did not introduce a type for Parallel Networks
+- Some comments are difficult to follow, e.g. "break the list into one long long"
