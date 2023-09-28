@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ExchangeCompMain">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button fx:id="submitButton" mnemonicParsing="false" onAction="#submitButtonPress" text="Submit" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <TextField fx:id="accountChange" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+      <TextField fx:id="accountBalance" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+      <Label fx:id="moneyLabel" text="Amount to Deposit/Withdraw" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+      <Label fx:id="balanceLabel" text="Account Balance(USD)" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+      <TextArea fx:id="cashOut" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3" />
+      <TextArea fx:id="exchangeRateArea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="61.0" prefWidth="300.0" promptText="Exchange Rate:" GridPane.columnIndex="1" GridPane.valignment="TOP" />
+      <ToggleButton fx:id="withdrawButton" mnemonicParsing="false" text="Withdraw" GridPane.halignment="CENTER">
+         <toggleGroup>
+            <ToggleGroup fx:id="buttonGroup" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="depositButton" mnemonicParsing="false" text="Deposit" toggleGroup="$buttonGroup" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+      <ToggleButton fx:id="closeButton" mnemonicParsing="false" text="Close Account" toggleGroup="$buttonGroup" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <Button fx:id="initialButton" mnemonicParsing="false" onAction="#initialButtonPress" text="Submit" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Label fx:id="balanceLabelSWD" text="Account Balance (SWD)" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets top="20.0" />
+         </GridPane.margin>
+      </Label>
+      <TextField fx:id="accountBalanceSWD" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+   </children>
+</GridPane>
